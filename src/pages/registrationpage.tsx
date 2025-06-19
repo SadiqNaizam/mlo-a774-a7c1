@@ -64,7 +64,7 @@ const RegistrationPage: React.FC = () => {
       // In a real app, you might redirect or clear form here
       // For now, just show success message. User journey says "Linked from the LoginPage", implying return to login.
       setTimeout(() => {
-        navigate('/'); // Navigate to LoginPage after a short delay
+        navigate('/login'); // Changed: Navigate to LoginPage after a short delay
       }, 2000);
     }
   };
@@ -161,7 +161,7 @@ const RegistrationPage: React.FC = () => {
             </Form>
             <div className="mt-6 text-center text-sm">
               Already have an account?{' '}
-              <Link to="/" className="font-medium text-primary hover:underline"> {/* Path from App.tsx */}
+              <Link to="/login" className="font-medium text-primary hover:underline"> {/* Changed: Path to LoginPage is now "/login" */}
                 Log in
               </Link>
             </div>
