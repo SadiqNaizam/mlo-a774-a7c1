@@ -102,23 +102,19 @@ const ForgotPasswordPage: React.FC = () => {
                 />
 
                 {formSubmissionMessage && (
-                  <Alert variant={formSubmissionMessage.type === 'error' ? 'destructive' : 'default'} className={formSubmissionMessage.type === 'success' ? 'border-green-500 text-green-700 [&>svg]:text-green-700' : ''}>
-                    {formSubmissionMessage.type === 'success' ? <CheckCircle2 className="h-4 w-4" /> : <AlertCircle className="h-4 w-4" />}
-                    <AlertTitle>{formSubmissionMessage.type === 'success' ? 'Instructions Sent' : 'Error'}</AlertTitle>
+                  <Alert variant={formSubmissionMessage.type === 'error' ? 'destructive' : 'default'} className={formSubmissionMessage.type === 'success' ? 'border-green-500 text-green-700 [&>svg]:text-green-700' : ''}>\n                    {formSubmissionMessage.type === 'success' ? <CheckCircle2 className="h-4 w-4" /> : <AlertCircle className="h-4 w-4" />}\n                    <AlertTitle>{formSubmissionMessage.type === 'success' ? 'Instructions Sent' : 'Error'}</AlertTitle>
                     <AlertDescription>
                       {formSubmissionMessage.text}
                     </AlertDescription>
                   </Alert>
                 )}
 
-                <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? 'Sending...' : 'Send Reset Link'}
-                </Button>
+                <Button type="submit" className="w-full" disabled={isLoading}>\n                  {isLoading ? 'Sending...' : 'Send Reset Link'}\n                </Button>
               </form>
             </Form>
             <div className="mt-6 text-center text-sm">
               Remember your password?{' '}
-              <Link to="/" className="font-medium text-primary hover:underline"> {/* Path from App.tsx */}
+              <Link to="/login" className="font-medium text-primary hover:underline"> {/* Changed: Path to LoginPage is now "/login" */}
                 Sign In
               </Link>
             </div>
