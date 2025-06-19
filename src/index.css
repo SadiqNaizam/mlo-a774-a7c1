@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%; /* Off-white */
-    --foreground: 224 71% 4%; /* Dark Gray/Blue for text */
+    --background: 0 0% 0%; /* Black */
+    --foreground: 0 0% 98%; /* Off-white for text on black background */
 
     --card: 0 0% 100%; /* White */
     --card-foreground: 224 71% 4%; /* Dark Gray/Blue for text */
@@ -34,10 +34,9 @@
 
     --radius: 0.5rem; /* 8px */
 
-    /* Fonts - ensure "Inter" is loaded in your project */
-    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    /* --font-body and --font-heading are no longer needed here as Tailwind config will use --font-sans directly */
+    /* Fonts - ensure \"Inter\" is loaded in your project */
+    --font-sans: \"Inter\", system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";
+    --font-serif: ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif;
 
     /* Sidebar Colors - Light Theme */
     --sidebar-background: 220 20% 96%; /* Very light cool gray */
@@ -51,7 +50,7 @@
   }
 
   .dark {
-    --background: 224 71% 4%; /* Dark Gray/Blue */
+    --background: 0 0% 0%; /* Black */
     --foreground: 0 0% 98%; /* Off-white text */
 
     --card: 220 70% 9%; /* Slightly lighter dark for card background */
@@ -90,8 +89,6 @@
     --sidebar-ring: 217 91% 70%;        /* Main dark ring color */
   }
 }
-
-/* Removed @layer utilities for .font-body and .font-heading as fonts will be handled by Tailwind config */
 
 @layer base {
   * {
