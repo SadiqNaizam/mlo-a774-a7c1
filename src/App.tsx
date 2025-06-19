@@ -5,9 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-import ForgotPasswordPage from "./pages/ForgotPasswordPage";
-import LoginPage from "./pages/LoginPage";
-import RegistrationPage from "./pages/RegistrationPage";
+import ForgotPasswordPage from "./pages/forgotpasswordpage"; // Corrected path
+import LoginPage from "./pages/loginpage"; // Corrected path
+import RegistrationPage from "./pages/registrationpage"; // Corrected path
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,9 +22,10 @@ const App = () => (
         <Routes>
 
 
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<RegistrationPage />} /> {/* Changed: / now shows RegistrationPage */}
+          <Route path="/login" element={<LoginPage />} /> {/* Added: /login shows LoginPage */}
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/registration" element={<RegistrationPage />} />
+          {/* Route path="/registration" element={<RegistrationPage />} /> Removed as / is now registration */}
           {/* catch-all */}
           <Route path="*" element={<NotFound />} />
 
