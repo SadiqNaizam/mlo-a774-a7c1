@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Black */
+    --background: 220 60% 30%; /* New Blue Background */
     --foreground: 0 0% 98%; /* Off-white for text on black background */
 
     --card: 0 0% 100%; /* White */
@@ -50,7 +50,7 @@
   }
 
   .dark {
-    --background: 0 0% 0%; /* Black */
+    --background: 220 60% 10%; /* New Dark Blue Background */
     --foreground: 0 0% 98%; /* Off-white text */
 
     --card: 220 70% 9%; /* Slightly lighter dark for card background */
