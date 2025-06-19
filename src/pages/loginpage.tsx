@@ -162,7 +162,7 @@ const LoginPage: React.FC = () => {
             <p className="mt-6 text-center text-sm text-muted-foreground">
               Don&apos;t have an account?{' '}
               <Link
-                to="/registration" // Path from App.tsx
+                to="/" // Changed: Path to RegistrationPage is now "/"
                 className="font-medium text-primary hover:underline"
               >
                 Sign up here
