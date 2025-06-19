@@ -65,32 +65,23 @@ const PasswordRecoveryPage: React.FC = () => {
 
               {message && (
                 <Alert variant={message.type === 'error' ? 'destructive' : 'default'} className={message.type === 'success' ? 'bg-green-50 border-green-300 text-green-700' : ''}>
-                  {message.type === 'success' ? <MailCheck className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}
+                  {message.type === 'success' ? <MailCheck className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}\
                   <AlertDescription className="ml-2">{message.text}</AlertDescription>
                 </Alert>
               )}
 
-              <Button type="submit" className="w-full h-10" disabled={isLoading}>
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  'Send Recovery Link'
-                )}
-              </Button>
+              <Button type="submit" className="w-full h-10" disabled={isLoading}>\n                {isLoading ? (\n                  <>\n                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />\n                    Sending...\n                  </>\n                ) : (\n                  'Send Recovery Link'\n                )}\n              </Button>
             </form>
           </CardContent>
           <CardFooter className="flex flex-col items-center space-y-2 pt-4">
             <Link
-              to="/" // Navigate to LoginPage as per App.tsx
+              to="/login" // Changed: Navigate to LoginPage 
               className="text-sm text-primary hover:underline"
             >
               Remembered your password? Login
             </Link>
              <Link
-              to="/registration" // Navigate to RegistrationPage as per App.tsx
+              to="/" // Changed: Navigate to RegistrationPage 
               className="text-sm text-muted-foreground hover:text-primary hover:underline"
             >
               Don't have an account? Sign Up
